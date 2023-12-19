@@ -1,0 +1,20 @@
+let strip = neopixel.create(DigitalPin.P15, 2, NeoPixelMode.RGB)
+basic.forever(function () {
+    music.play(music.stringPlayable("D E A - A E - G ", 150), music.PlaybackMode.UntilDone)
+})
+basic.forever(function () {
+    strip.showColor(neopixel.rgb(132, 123, 231))
+    basic.pause(200)
+    strip.showColor(neopixel.rgb(0, 111, 199))
+    basic.pause(200)
+    strip.showColor(neopixel.rgb(311, 0, 54))
+    basic.pause(200)
+    strip.showColor(neopixel.rgb(98, 211, 0))
+    basic.pause(200)
+})
+basic.forever(function () {
+    cuteBot.turnright()
+    cuteBot.moveTime(cuteBot.Direction.forward, 100, 0.1)
+    cuteBot.turnleft()
+    cuteBot.moveTime(cuteBot.Direction.backward, 100, 0.1)
+})
